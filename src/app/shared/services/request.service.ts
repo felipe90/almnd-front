@@ -12,12 +12,11 @@ export class RequestService {
   readonly ROOT_URL = environment.apiHotelsUrl;
 
   constructor(
-    private http: HttpService
+    private httpService: HttpService
   ) { }
 
-  public getHotels(): Observable<any> {
-    console.log(`${this.ROOT_URL}`);
-    return this.http.get(`${this.ROOT_URL}`)
+  public getHotels(params?: any): Observable<any> {
+    return this.httpService.get(`${this.ROOT_URL}`, params)
       .map((response: any) => response)
       .catch((error) => {
         return Observable.throw(error);
@@ -25,7 +24,7 @@ export class RequestService {
   }
 
   public getHotelById(id: string): Observable<any> {
-    return this.http.get(`${this.ROOT_URL}`)
+    return this.httpService.get(`${this.ROOT_URL}`)
       .map((response: any) => response)
       .catch((error) => {
         return Observable.throw(error);

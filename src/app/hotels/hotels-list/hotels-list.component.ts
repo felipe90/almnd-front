@@ -16,8 +16,10 @@ export class HotelsListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.requestService.getHotels().subscribe(res => {
-      console.log(res);
+    const query = {name: 'Casa', stars: 2};
+    this.requestService.getHotels(query).subscribe(res => {
+      this.hotelsModel = res;
+      console.log(this.hotelsModel);
     });
   }
 

@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prod": "ng build --prod --aot",
     "build": "ng build",
+    "lint": "ng lint --type-check",
+    "prod": "ng build --prod --env=prod --aot",
     "test": "ng test --code-coverage --watch=false",
     "debug": "ng test --browsers=Chrome -sm=false",
-    "lint": "ng lint --type-check",
     "e2e": "ng e2e"
   },
   "private": true,

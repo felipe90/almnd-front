@@ -1,1 +1,4 @@
-<app-hotel></app-hotel>
+
+<li *ngFor="let hotel of hotelsModel ; index as i">
+    <app-hotel [hotelModel]="hotel"></app-hotel>
+ </li>
