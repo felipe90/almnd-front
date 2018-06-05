@@ -9,19 +9,15 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class RequestService {
 
-  readonly ROOT_URL = environment.apiUrl;
-
-  readonly END_POINTS = {
-    HOTELS : 'products'
-  };
+  readonly ROOT_URL = environment.apiHotelsUrl;
 
   constructor(
     private http: HttpService
   ) { }
 
   public getHotels(): Observable<any> {
-    // const params = new HttpParams().set('id', id);
-    return this.http.get(`${this.ROOT_URL}/${this.END_POINTS.HOTELS}`)
+    console.log(`${this.ROOT_URL}`);
+    return this.http.get(`${this.ROOT_URL}`)
       .map((response: any) => response)
       .catch((error) => {
         return Observable.throw(error);
@@ -29,7 +25,7 @@ export class RequestService {
   }
 
   public getHotelById(id: string): Observable<any> {
-    return this.http.get(`${this.ROOT_URL}/${this.END_POINTS.HOTELS}/${id}`)
+    return this.http.get(`${this.ROOT_URL}`)
       .map((response: any) => response)
       .catch((error) => {
         return Observable.throw(error);

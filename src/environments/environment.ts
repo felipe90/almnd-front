@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'htttp://localhost:3000'
+  apiHotelsUrl: 'htttp://localhost:3000/products/?dummy=true'
 };

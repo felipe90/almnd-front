@@ -1,25 +1,28 @@
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './core/header/header.component';
+import { HotelsModule } from './hotels/hotels.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { RequestService } from './shared/services/request.service';
 import { SharedModule } from './shared/shared.module';
-import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CoreModule,
     FormsModule,
     HttpModule,
     HttpClientModule,
+    HotelsModule,
     ReactiveFormsModule,
     SharedModule,
     HttpClientModule,
