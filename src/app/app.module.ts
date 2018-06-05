@@ -7,10 +7,12 @@ import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { RequestService } from './shared/services/request.service';
 import { SharedModule } from './shared/shared.module';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

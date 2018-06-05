@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpService } from './services/http.service';
 import { NgModule } from '@angular/core';
+import { HotelsFiltersComponent } from './components/hotels-filters/hotels-filters.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { NgModule } from '@angular/core';
   providers: [
     HttpService,
   ],
-  declarations: []
+  declarations: [HotelsFiltersComponent]
 })
 export class SharedModule { }
