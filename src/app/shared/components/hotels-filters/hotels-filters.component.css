@@ -1,0 +1,62 @@
+
+:host {
+    background-color: #f4f4f4
+}
+
+::ng-deep p-card .ui-card-body {
+    padding: 0;
+}
+::ng-deep p-card .ui-card-body {
+    padding: 0;
+}
+::ng-deep p-card .ui-card-content {
+    background-color: #f4f4f4
+}
+
+::ng-deep p-panel .ui-panel {
+    margin-bottom: 4px
+}
+
+::ng-deep p-panel .ui-panel-titlebar {
+    background: #FFFFFF;
+    border: none
+}
+
+::ng-deep p-panel .ui-panel-titlebar .ui-panel-titlebar-icon { 
+    border: none;
+    color: #1579b1;
+}
+
+.ui-inputtext {
+    width: 100%;
+}
+
+.filter-checkbox {
+    padding: 11px 5px;
+}
+
+.filter-container {
+    background: #FFFFFF;    
+    margin-bottom: 4px;
+    min-height: 40px;
+    padding: 10px 0;
+}
+
+.filter-container .filter-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.filter-container .filter-title {
+    color: #444444;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.filter-container .filter-label {
+    color: #1579b1;
+    vertical-align: super;
+}
+

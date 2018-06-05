@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
+import { HotelsManagerService } from './shared/services/hotels-manager.service';
 import { HotelsModule } from './hotels/hotels.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -31,7 +32,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
   ],
   providers: [
-    RequestService
+    RequestService,
+    HotelsManagerService
   ],
   bootstrap: [AppComponent]
 })

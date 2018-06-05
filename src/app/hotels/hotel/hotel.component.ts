@@ -21,10 +21,6 @@ export class HotelComponent implements OnInit {
     this.imageUrl = `${environment.imagesUrl}${this.hotelModel.image}`;
   }
 
-  public getIterableArray(num) {
-    return new Array(parseInt(num, 10));
-  }
-
   public openItemDetail() {
     console.log('item detail');
   }

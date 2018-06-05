@@ -1,5 +1,4 @@
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/components/card/card';
+import { ButtonModule, CardModule } from 'primeng/primeng';
 import { CommonModule } from '@angular/common';
 import { HotelComponent } from './hotel/hotel.component';
 import { HotelsListComponent } from './hotels-list/hotels-list.component';
@@ -10,7 +9,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    SharedModule,
   ],
   exports: [HotelsListComponent, HotelComponent],
   declarations: [HotelsListComponent, HotelComponent]

@@ -2,21 +2,19 @@
     <img class="hotel-img" [src]="imageUrl" alt="hotelModel.name">
     <h3>{{hotelModel.name}}</h3>
     <ul class="stars-contanier">
-        <li class="star-img" *ngFor="let star of getIterableArray(hotelModel.stars)">
-            <img [src]="'./assets/icons/filters/star_1.svg'">
-        </li>
+        <app-stars [itemsNumber]="hotelModel.stars"></app-stars>
     </ul>
     <ul class="amenities-contanier">
         <li class="amenitie-img" *ngFor="let amenitie of hotelModel.amenities">
             <img [src]="'./assets/icons/amenities/'+amenitie+'.svg'">
         </li>
     </ul>
-
     <span>Precio por noche por habitacion</span>
     <div class="price-container">
-        <span class="price-currency">ARG</span><span class="price-value">{{hotelModel.price}}</span>
+        <span class="price-currency">ARG</span>
+        <span class="price-value">{{hotelModel.price}}</span>
     </div>
-    <button pButton type="button" (click)="openItemDetail(item)" label="{{detailButtonLabel}}"></button>
-    
+    <button pButton type="button" class="btn-action" (click)="openItemDetail(item)" label="{{detailButtonLabel}}"></button>
+
 
 </p-card>
