@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  apiHotelsUrl: 'http://localhost:3000/products/?dummy=true'
+  apiHotelsUrl: 'http://localhost:3000/products/?dummy=true',
+  imagesUrl: 'http://localhost:3000/uploads/'
 };

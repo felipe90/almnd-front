@@ -1,4 +1,5 @@
-
-<li *ngFor="let hotel of hotelsModel ; index as i">
-    <app-hotel [hotelModel]="hotel"></app-hotel>
- </li>
+<div class="hotels-list-container" *ngIf="hotelsModel">
+    <div *ngFor="let hotel of hotelsModel ; index as i">
+        <app-hotel [hotelModel]="hotel"></app-hotel>
+    </div>
+</div>
