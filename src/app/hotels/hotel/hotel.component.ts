@@ -17,7 +17,6 @@ export class HotelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.hotelModel);
     this.imageUrl = `${environment.imagesUrl}${this.hotelModel.image}`;
   }
 

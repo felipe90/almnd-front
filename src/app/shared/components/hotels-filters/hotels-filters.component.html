@@ -1,4 +1,4 @@
-<p-card styleClass="ui-card-shadow">
+<p-card styleClass="ui-card-shadow no-background">
   <div class="filter-container">
     <span class="filter-title">Filtros</span>
   </div>
@@ -18,23 +18,23 @@
       <span class="filter-label">Estrellas</span>
     </p-header>
     <div class="ui-inputgroup">
-      <p-radioButton name="starts" value="5" [(ngModel)]="startFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
+      <p-radioButton name="starts" value="5" [(ngModel)]="starsFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
       <app-stars [itemsNumber]="5"></app-stars>
     </div>
     <div class="ui-inputgroup">
-      <p-radioButton name="starts" value="4" [(ngModel)]="startFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
+      <p-radioButton name="starts" value="4" [(ngModel)]="starsFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
       <app-stars [itemsNumber]="4"></app-stars>
     </div>
     <div class="ui-inputgroup">
-      <p-radioButton name="starts" value="3" [(ngModel)]="startFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
+      <p-radioButton name="starts" value="3" [(ngModel)]="starsFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
       <app-stars [itemsNumber]="3"></app-stars>
     </div>
     <div class="ui-inputgroup">
-      <p-radioButton name="starts" value="2" [(ngModel)]="startFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
+      <p-radioButton name="starts" value="2" [(ngModel)]="starsFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
       <app-stars [itemsNumber]="2"></app-stars>
     </div>
     <div class="ui-inputgroup">
-      <p-radioButton name="starts" value="1" [(ngModel)]="startFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
+      <p-radioButton name="starts" value="1" [(ngModel)]="starsFilterNumber" class="filter-checkbox" (click)="onSelectStarsValue()"></p-radioButton>
       <app-stars [itemsNumber]="1"></app-stars>
     </div>
   </p-panel>

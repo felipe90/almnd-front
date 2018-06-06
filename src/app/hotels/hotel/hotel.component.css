@@ -1,9 +1,18 @@
+::ng-deep p-card .ui-card-content {
+    background-color: #FFFFFF;
+}
+
 .hotel-img {
     width: 300px;
     height: 200px;
 }
 
-.amenities-contanier, 
+.hotel-label {
+    color: #1579b1;
+    vertical-align: super;
+}
+
+.amenities-contanier,
 .stars-contanier {
     margin: 0;
     display: block
@@ -14,4 +23,39 @@
     margin: 8px;
     width: 25px;
     height: 25px;
+}
+
+.amenitie-img img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-action.ui-button {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.btn-action.ui-button .ui-button-text {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.price-container {
+    color: #df6800;
+    text-align: center;
+}
+
+.price-container .price-currency {
+    font-size: 1.5rem;
+}
+
+.price-container .price-meta {
+    display: block;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.price-container .price-value {
+    font-size: 2rem;
+    font-weight: bold
 }

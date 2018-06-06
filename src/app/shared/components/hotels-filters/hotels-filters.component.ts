@@ -13,10 +13,8 @@ import { HotelsManagerService } from '../../services/hotels-manager.service';
 })
 export class HotelsFiltersComponent implements OnInit {
 
-  @Output() public onSelectFilters = new EventEmitter();
-
-  public starsFilterNumber = 5;
-  public nameFilterValue: String;
+  public starsFilterNumber: Number = null;
+  public nameFilterValue: String = null;
 
   constructor(
     private hotelsManagerService: HotelsManagerService
@@ -34,7 +32,10 @@ export class HotelsFiltersComponent implements OnInit {
   }
 
   public getFilters(): any {
-    return {name : this.nameFilterValue || null , stars: this.starsFilterNumber || null};
+    const _filters: any = {};
+    _filters.name = this.nameFilterValue;
+    _filters.stars = this.starsFilterNumber;
+    return _filters;
   }
 
 }

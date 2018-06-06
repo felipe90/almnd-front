@@ -9,7 +9,8 @@
 ::ng-deep p-card .ui-card-body {
     padding: 0;
 }
-::ng-deep p-card .ui-card-content {
+
+::ng-deep .no-background {
     background-color: #f4f4f4
 }
 
@@ -57,6 +58,6 @@
 
 .filter-container .filter-label {
     color: #1579b1;
-    vertical-align: super;
+    vertical-align: baseline;
 }
 

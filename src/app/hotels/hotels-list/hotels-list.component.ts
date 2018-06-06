@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Hotel } from '../models/hotel.model';
 import { HotelsManagerService } from '../../shared/services/hotels-manager.service';
+import { Observable } from 'rxjs/Observable';
 import { RequestService } from '../../shared/services/request.service';
-
+import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'app-hotels-list',
   templateUrl: './hotels-list.component.html',
@@ -19,16 +20,16 @@ export class HotelsListComponent implements OnInit {
 
   ngOnInit() {
     const query = {name: 'Casa', stars: 2};
-    console.log('asdasd');
-    // const query = this.hotelsManagerService.hotelsFilters;
 
-    this.hotelsManagerService.onChangeFilters.subscribe(() => {
-      console.log(this.hotelsManagerService.getHotelsFilters());
-    });
-    this.requestService.getHotels(query).subscribe(res => {
-      this.hotelsModel = res;
-      console.log(this.hotelsModel);
-    });
+    this.hotelsManagerService.onChangeFilters
+      .switchMap((res) => {
+        return this.requestService.getHotels(res);
+      })
+      .subscribe((res) => {
+        this.hotelsModel = res;
+      }, (err) => {
+        Observable.throw(err);
+      });
   }
 
 
