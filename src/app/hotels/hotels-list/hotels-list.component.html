@@ -1,5 +1,10 @@
-<div class="hotels-list-container" *ngIf="hotelsModel">
-    <div *ngFor="let hotel of hotelsModel ; index as i">
+<div class="hotels-list-container" *ngIf="hotelsModel; else noResults">
+    <div class="single-hotel" *ngFor="let hotel of hotelsModel ; index as i">
         <app-hotel [hotelModel]="hotel"></app-hotel>
     </div>
 </div>
+<ng-template #noResults>
+    <div class="alert alert-secondary" role="alert">
+        Ningun resultado
+    </div>
+</ng-template>

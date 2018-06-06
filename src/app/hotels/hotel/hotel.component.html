@@ -1,20 +1,26 @@
-<p-card styleClass="ui-card-shadow" *ngIf="hotelModel">
-    <img class="hotel-img" [src]="imageUrl" alt="{{hotelModel.name}}">
-    <h3 class="hotel-label">{{hotelModel.name}}</h3>
-    <ul class="stars-contanier">
-        <app-stars [itemsNumber]="hotelModel.stars"></app-stars>
-    </ul>
-    <ul class="amenities-contanier">
-        <li class="amenitie-img" *ngFor="let amenitie of hotelModel.amenities">
-            <img [src]="'./assets/icons/amenities/'+amenitie+'.svg'">
-        </li>
-    </ul>
-    <div class="price-container">
-        <span class="price-meta">Precio por noche por habitacion</span>
-        <span class="price-currency">ARG</span>
-        <span class="price-value">{{hotelModel.price}}</span>
+<p-card styleClass="ui-card-shadow background-white" *ngIf="hotelModel">
+    <div class="hotel-container row">
+        <div class="col-lg-4 col-md-4">
+            <img class="hotel-img" [src]="imageUrl" alt="{{hotelModel.name}}">
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <h3 class="hotel-label">{{hotelModel.name}}</h3>
+            <ul class="stars-contanier">
+                <app-stars [itemsNumber]="hotelModel.stars"></app-stars>
+            </ul>
+            <ul class="amenities-contanier">
+                <li class="amenitie-img" *ngFor="let amenitie of hotelModel.amenities">
+                    <img [src]="'./assets/icons/amenities/'+amenitie+'.svg'">
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="price-container">
+                <span class="price-meta">Precio por noche por habitaci&oacute;n</span>
+                <span class="price-currency">ARG</span>
+                <span class="price-value">{{hotelModel.price}}</span>
+                <button pButton type="button" class="btn-action" (click)="openItemDetail(item)" label="{{detailButtonLabel}}"></button>
+            </div>
+        </div>
     </div>
-    <button pButton type="button" class="btn-action" (click)="openItemDetail(item)" label="{{detailButtonLabel}}"></button>
-
-
 </p-card>

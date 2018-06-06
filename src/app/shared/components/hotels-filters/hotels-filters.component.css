@@ -11,7 +11,8 @@
 }
 
 ::ng-deep .no-background {
-    background-color: #f4f4f4
+    background-color: #f4f4f4;
+    margin: 10px 0 10px 10px;
 }
 
 ::ng-deep p-panel .ui-panel {
@@ -61,3 +62,9 @@
     vertical-align: baseline;
 }
 
+@media screen and (max-width: 990px) {
+    :host {
+        margin: 0;
+        text-align: center;
+    }
+}
