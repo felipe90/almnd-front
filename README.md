@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 
+## First
+
+Clone repo and run  `npm i` to install all dependencies 
+
 ## Development server
 
 Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -9,6 +13,8 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 ## Build
 
 Run `npm run prod` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+Note: Production build use MongoDB as persisten layer, instead of developer build that us "dummy" data
 
 ## Running unit tests
 
